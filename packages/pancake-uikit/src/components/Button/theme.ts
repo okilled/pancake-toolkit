@@ -18,8 +18,8 @@ export const scaleVariants = {
 
 export const styleVariants = {
   [variants.PRIMARY]: {
-    backgroundColor: "primary",
     color: "white",
+    background: "linear-gradient(90deg, #4269BB 0%, #8214FE 100%)", // 没有使用theme中的值
   },
   [variants.SECONDARY]: {
     backgroundColor: "transparent",
