@@ -140,6 +140,7 @@ const Menu: React.FC<NavProps> = ({
                 border: "1px solid #8214FE",
                 borderRadius: 5,
                 color: isDark ? "#F4EEFF" : "#333",
+                fontWeight: "bold",
               }}
             >
               Swap
