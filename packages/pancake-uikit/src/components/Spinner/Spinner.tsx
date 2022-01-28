@@ -1,8 +1,10 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import Lottie from "react-lottie-player";
 import PanIcon from "./PanIcon";
 import PancakeIcon from "./PancakeIcon";
 import Loading from "./Loading";
+import lottieJson from "./loading.json";
 
 import { SpinnerProps } from "./types";
 
@@ -53,8 +55,9 @@ const LoadingIcon = styled(Loading)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <LoadingIcon />
+      {/* <LoadingIcon /> */}
       {/* <FloatingPanIcon width={`${size}px`} /> */}
+      <Lottie loop animationData={lottieJson} play style={{ width: size, height: size }} />
     </Container>
   );
 };

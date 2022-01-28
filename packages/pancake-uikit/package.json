@@ -35,7 +35,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "@rollup/plugin-json": "^4.1.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -49,7 +50,8 @@
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
     "react-popper": "^2.2.5",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "react-lottie-player": "^1.4.1"
   },
   "publishConfig": {
     "access": "public"

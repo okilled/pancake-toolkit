@@ -13,10 +13,12 @@ import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT, TOP_BANNER_HEIGHT, TOP_BANNER_HEIGHT_MOBILE } from "./config";
 import { NavProps } from "./types";
 import LangSelector from "../../components/LangSelector/LangSelector";
+import { Spinner } from "../../components/Spinner";
 
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  background: ${({ theme }) => theme.colors.gradients.bubblegum};
 `;
 
 const StyledNav = styled.nav`
@@ -128,8 +130,20 @@ const Menu: React.FC<NavProps> = ({
       <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
         {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
         <StyledNav>
-          <Flex>
+          <Flex alignItems="center">
             <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+            <div
+              style={{
+                marginLeft: 10,
+                padding: 3,
+                fontSize: "13px",
+                border: "1px solid #8214FE",
+                borderRadius: 5,
+                color: isDark ? "#F4EEFF" : "#333",
+              }}
+            >
+              Swap
+            </div>
             {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
           </Flex>
           <Flex alignItems="center" height="100%">
@@ -166,9 +180,18 @@ const Menu: React.FC<NavProps> = ({
           )}
         </Flex>
       )}
-      <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
+      <BodyWrapper
+        pt={!subLinks ? `${totalTopMenuHeight + 1 + 42}px` : "0"}
+        pb={!subLinks && isMobile ? `${totalTopMenuHeight + 1 + 42}px` : "0"}
+      >
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
+          {!isMobile && (
+            <div style={{ position: "absolute", right: 0, bottom: 0 }}>
+              <Spinner />
+            </div>
+          )}
+
           {/* <Footer
             items={footerLinks}
             isDark={isDark}

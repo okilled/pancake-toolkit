@@ -1,9 +1,9 @@
 import { Colors } from "./types";
 
 export const baseColors = {
-  failure: "#ED4B9E",
+  failure: "#ff4d4f",
   primary: "#6520DA",
-  primaryBright: "#53DEE9",
+  primaryBright: "#096dd9",
   primaryDark: "#0098A1",
   secondary: "#7645D9",
   success: "#31D0AA",
@@ -38,7 +38,7 @@ export const lightColors: Colors = {
   textSubtle: "#999999",
   disabled: "#E9EAEB",
   gradients: {
-    bubblegum: "#FFFFFF",
+    bubblegum: "linear-gradient(-36deg, #CDE3FD 0%, #EBE1FF 100%)",
     inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
     cardHeader: "#FFFFFF",
     blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
