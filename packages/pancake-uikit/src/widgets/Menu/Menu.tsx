@@ -18,7 +18,6 @@ import { Spinner } from "../../components/Spinner";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  background: ${({ theme }) => theme.colors.gradients.bubblegum};
 `;
 
 const StyledNav = styled.nav`
@@ -62,6 +61,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
+  background: ${({ theme }) => theme.colors.gradients.bubblegum};
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -181,10 +181,7 @@ const Menu: React.FC<NavProps> = ({
           )}
         </Flex>
       )}
-      <BodyWrapper
-        pt={!subLinks ? `${totalTopMenuHeight + 1 + 42}px` : "0"}
-        pb={!subLinks && isMobile ? `${totalTopMenuHeight + 1 + 42}px` : "0"}
-      >
+      <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
           {!isMobile && (
@@ -206,7 +203,7 @@ const Menu: React.FC<NavProps> = ({
           /> */}
         </Inner>
       </BodyWrapper>
-      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
+      {/* {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />} */}
     </Wrapper>
   );
 };
