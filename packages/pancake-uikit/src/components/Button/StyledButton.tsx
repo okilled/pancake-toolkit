@@ -15,7 +15,7 @@ const getDisabledStyles = ({ $isLoading, theme }: TransientButtonProps) => {
   if ($isLoading === true) {
     return `
       &:disabled,
-      &.pancake-button--disabled {
+      &.pancake-button--loading {
         cursor: not-allowed;
       }
     `;

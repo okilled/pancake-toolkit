@@ -19,43 +19,43 @@ export const scaleVariants = {
 export const styleVariants = {
   [variants.PRIMARY]: {
     color: "white",
-    // background: "primary",
+    // backgroundColor: "primary",
     background: "linear-gradient(90deg, #4269BB 0%, #8214FE 100%)", // 没有使用theme中的值
   },
   [variants.SECONDARY]: {
-    background: "transparent",
+    backgroundColor: "transparent",
     border: "2px solid",
     borderColor: "primary",
     boxShadow: "none",
     color: "primary",
     ":disabled": {
-      background: "transparent",
+      backgroundColor: "transparent",
     },
   },
   [variants.TERTIARY]: {
-    background: "tertiary",
+    backgroundColor: "tertiary",
     boxShadow: "none",
     color: "primary",
   },
   [variants.SUBTLE]: {
-    background: "textSubtle",
+    backgroundColor: "textSubtle",
     color: "backgroundAlt",
   },
   [variants.DANGER]: {
-    background: "failure",
+    backgroundColor: "failure",
     color: "white",
   },
   [variants.SUCCESS]: {
-    background: "success",
+    backgroundColor: "success",
     color: "white",
   },
   [variants.TEXT]: {
-    background: "transparent",
+    backgroundColor: "transparent",
     color: "primary",
     boxShadow: "none",
   },
   [variants.LIGHT]: {
-    background: "input",
+    backgroundColor: "input",
     color: "textSubtle",
     boxShadow: "none",
   },

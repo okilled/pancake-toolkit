@@ -56,12 +56,13 @@ const BodyWrapper = styled(Box)`
   display: flex;
 `;
 
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+const Inner = styled.div<{ isPushed: boolean; showMenu: boolean; pt: boolean }>`
   flex-grow: 1;
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
   background: ${({ theme }) => theme.colors.gradients.bubblegum};
+  padding-top: ${({ pt }) => (pt ? "42px" : "0")};
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -182,7 +183,8 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
       )}
       <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
-        <Inner isPushed={false} showMenu={showMenu}>
+        {/* pt 用来修复去掉footer后有白底 */}
+        <Inner isPushed={false} showMenu={showMenu} pt={!subLinks && !isMobile}>
           {children}
           {!isMobile && (
             <div style={{ position: "absolute", right: 0, bottom: 0 }}>
