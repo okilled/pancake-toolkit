@@ -26,7 +26,7 @@ const PriceLink = styled.a`
 const CakePrice: React.FC<Props> = ({ cakePriceUsd, color = "textSubtle" }) => {
   return cakePriceUsd ? (
     <PriceLink
-      href="https://swap.ninance.io/swap?outputCurrency=0xA3a9D092f40D2642B1dbaceb5Df6B0C7940f9ab4"
+      href="https://swap.ninance.io/swap?outputCurrency=0x3f47D316b6Ca268C8a7916D6Ed02E90DbFEE3EE2"
       target="_blank"
     >
       <PancakeRoundIcon width="24px" mr="8px" />

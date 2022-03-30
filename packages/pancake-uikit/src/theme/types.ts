@@ -73,6 +73,8 @@ export type Colors = {
   gold: string;
   silver: string;
   bronze: string;
+
+  border: string;
 };
 
 export type ZIndices = {
