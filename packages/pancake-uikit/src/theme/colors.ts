@@ -47,6 +47,7 @@ export const lightColors: Colors = {
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
   },
   border: "#DDDDDD",
+  backgroundAlt3: "#FFFFFF",
 };
 
 export const darkColors: Colors = {
@@ -80,4 +81,5 @@ export const darkColors: Colors = {
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
   },
   border: "#372F47",
+  backgroundAlt3: "#27262c",
 };

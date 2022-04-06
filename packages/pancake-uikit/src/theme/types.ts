@@ -75,6 +75,7 @@ export type Colors = {
   bronze: string;
 
   border: string;
+  backgroundAlt3: string;
 };
 
 export type ZIndices = {
